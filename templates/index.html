@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Zee Intelligence</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+            <a href="models.html" class="mr-5 hover:text-gray-900">Models</a>
+            <a href="contact.html" class="mr-5 hover:text-gray-900">Contact</a>
+          </nav>
+          
+        </div>
+      </header>
+    <section class="text-gray-700 body-font">
+        <div class="login">
+            <h1>Prediction</h1>
+        
+            <form action='/predict' method="post">
+            
+                <input type = "text" name="bedrooms" placeholder="bedrooms" required="required"/>
+                <input type = "text" name="bathrooms" placeholder="bathrooms" required="required"/>
+                <input type = "text" name="floors" placeholder="floors" required="required"/>
+                <input type = "text" name="waterfront" placeholder="waterfront" required="required"/>
+                <input type = "text" name="view" placeholder="view" required="required"/>
+                <input type = "text" name="sqft_total" placeholder="sqft_total" required="required"/>
+                <input type = "text" name="yr_effective" placeholder="yr_effective" required="required"/>
+                <input type = "text" name="lat" placeholder="lat" required="required"/>
+                <input type = "text" name="long" placeholder="long" required="required"/>
+            </form>
+        
+            <br>
+            <br>
+            {{prediction_text}}
+        
+        </div> 
+</body>
+</html>
+
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
